@@ -1,0 +1,40 @@
+# Go build and dependency files
+/bin/
+/build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.log
+*.tmp
+*.swp
+*.DS_Store
+*.vscode/
+
+# Go modules
+/go.sum
+/go.sum:Zone.Identifier
+
+# SQLite database
+users.db
+
+# Node/Vite/Vue
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+
+# IDE/editor
+.idea/
+*.iml
+*.sublime*
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Misc
+*.Zone.Identifier
