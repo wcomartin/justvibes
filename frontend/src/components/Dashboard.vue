@@ -2,6 +2,7 @@
   <div class="dashboard-layout">
     <aside class="sidebar">
       <div class="logo">JustVibes</div>
+      <router-link class="sidebar-link" to="/jobs">Jobs</router-link>
       <div class="sidebar-spacer"></div>
       <button class="sidebar-logout-btn" @click="logout">Logout</button>
     </aside>
@@ -125,6 +126,20 @@ html, body, #app {
   padding: 32px 0 24px 32px;
   letter-spacing: 1px;
   color: #3b82f6;
+}
+.sidebar-link {
+  display: block;
+  color: #2563eb;
+  font-weight: 600;
+  padding: 12px 32px 12px 32px;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 8px 0 0 0;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-link:hover, .sidebar-link.router-link-exact-active {
+  background: #e0e7ff;
+  color: #1e293b;
 }
 .sidebar-spacer {
   flex: 1 1 auto;
