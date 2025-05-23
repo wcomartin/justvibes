@@ -106,6 +106,9 @@ async function login() {
 <style scoped>
 .auth-container {
   min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
