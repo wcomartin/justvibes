@@ -9,25 +9,25 @@
       <h1 class="dashboard-title">Welcome to JustVibes Dashboard</h1>
       <div class="dashboard-stats">
         <div class="stat-card">
-          <div class="stat-value">1,234</div>
-          <div class="stat-label">Active Users</div>
+          <div class="stat-value">42</div>
+          <div class="stat-label">Active Jobs</div>
         </div>
         <div class="stat-card">
-          <div class="stat-value">87%</div>
-          <div class="stat-label">Engagement</div>
+          <div class="stat-value">15</div>
+          <div class="stat-label">Work Orders Today</div>
         </div>
         <div class="stat-card">
-          <div class="stat-value">$4,560</div>
-          <div class="stat-label">Revenue</div>
+          <div class="stat-value">7</div>
+          <div class="stat-label">Completed This Week</div>
         </div>
       </div>
       <div class="dashboard-charts">
         <div class="chart-container">
-            <h2>Visitors</h2>
+            <h2>Jobs Over Time</h2>
             <div class="canvas-wrapper"><canvas id="lineChart"></canvas></div>
         </div>
         <div class="chart-container">
-            <h2>Revenue</h2>
+            <h2>Work Orders by Type</h2>
             <div class="canvas-wrapper"><canvas id="barChart"></canvas></div>
         </div>
       </div>
@@ -53,15 +53,15 @@ export default {
     }
   },
   mounted() {
-    // Line Chart Example
+    // Line Chart: Jobs Over Time
     const lineCtx = document.getElementById('lineChart').getContext('2d');
     new Chart(lineCtx, {
       type: 'line',
       data: {
         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         datasets: [{
-          label: 'Visitors',
-          data: [120, 190, 300, 500, 200, 300, 400],
+          label: 'Jobs',
+          data: [5, 8, 6, 10, 7, 3, 4],
           borderColor: '#3b82f6',
           backgroundColor: 'rgba(59,130,246,0.1)',
           tension: 0.4,
@@ -73,16 +73,16 @@ export default {
         plugins: { legend: { display: false } }
       }
     });
-    // Bar Chart Example
+    // Bar Chart: Work Orders by Type
     const barCtx = document.getElementById('barChart').getContext('2d');
     new Chart(barCtx, {
       type: 'bar',
       data: {
-        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+        labels: ['Install', 'Repair', 'Inspection', 'Upgrade'],
         datasets: [{
-          label: 'Revenue',
-          data: [1200, 1900, 3000, 4560],
-          backgroundColor: '#3b82f6',
+          label: 'Work Orders',
+          data: [6, 4, 3, 2],
+          backgroundColor: ['#3b82f6', '#10b981', '#f59e42', '#6366f1'],
         }]
       },
       options: {
